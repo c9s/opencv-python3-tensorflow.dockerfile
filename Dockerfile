@@ -8,3 +8,4 @@ RUN pip install dlib
 RUN pip install Pillow
 RUN pip install face_recognition
 RUN pip install tensorflow
+RUN pip install pandas
