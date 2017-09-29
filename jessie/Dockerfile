@@ -2,10 +2,11 @@ FROM yoanlin/opencv-python3:latest
 
 MAINTAINER Yo-An Lin <yoanlin93@gmail.com>
 
-RUN pip install cython
-RUN pip install six
-RUN pip install dlib
-RUN pip install Pillow
-RUN pip install face_recognition
-RUN pip install tensorflow
-RUN pip install pandas
+RUN pip install cython \
+ && pip install six \
+ && pip install Pillow \
+ && pip install tensorflow \
+ && pip install dlib \
+ && pip install face_recognition \
+ && pip install pandas \
+ && rm -rf ~/.cache/pip
