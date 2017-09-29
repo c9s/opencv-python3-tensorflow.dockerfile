@@ -1,4 +1,4 @@
-FROM yoanlin/opencv-python3:latest
+FROM yoanlin/opencv-python3:stretch
 
 MAINTAINER Yo-An Lin <yoanlin93@gmail.com>
 

@@ -1,4 +1,4 @@
-FROM yoanlin/opencv-python3:latest
+FROM yoanlin/opencv-python3:jessie
 
 MAINTAINER Yo-An Lin <yoanlin93@gmail.com>
 

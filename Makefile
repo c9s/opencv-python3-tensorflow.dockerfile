@@ -1,3 +1,17 @@
-all:
-	docker build --rm --squash --tag yoanlin/opencv-python3-tensorflow:latest .
-	docker push yoanlin/opencv-python3-tensorflow:latest
+IMAGE=yoanlin/opencv-python3-tensorflow
+
+jessie:
+	docker build --tag $(IMAGE):$@ \
+				 --file $@/Dockerfile .
+
+stretch:
+	docker build --tag $(IMAGE):$@ \
+				 --file $@/Dockerfile .
+
+latest: jessie
+	docker tag $(IMAGE):$< $(IMAGE):$@
+
+all: jessie stretch latest
+	docker push $(IMAGE)
+
+.PHONY: jessie stretch latest
